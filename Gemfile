@@ -37,6 +37,7 @@ group :development, :test do
   gem 'rubocop', '~> 0.91.0', require: false
   gem 'rubocop-rails', require: false
   gem 'video_info', '~> 2.8'
+  gem 'yt', '~> 0.32.0'
 end
 
 group :development do
