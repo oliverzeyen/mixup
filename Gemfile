@@ -1,5 +1,7 @@
+# frozen_string_literal: true
+
 source 'https://rubygems.org'
-git_source(:github) { |repo| "https://github.com/#{repo}.git" }
+git_source(:github) {|repo| "https://github.com/#{repo}.git" }
 
 ruby '2.7.1'
 
@@ -32,18 +34,19 @@ group :development, :test do
   gem 'factory_bot', '~> 4.8', '>= 4.8.2'
   gem 'pry-rails'
   gem 'rspec-rails', '~> 4.0.1'
-  gem 'rubocop-rails', require: false
   gem 'rubocop', '~> 0.91.0', require: false
+  gem 'rubocop-rails', require: false
+  gem 'video_info', '~> 2.8'
 end
 
 group :development do
   # Access an interactive console on exception pages or by calling 'console' anywhere in the code.
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'listen', '~> 3.2'
-  gem 'spring-watcher-listen', '~> 2.0.0'
   gem 'spring'
+  gem 'spring-watcher-listen', '~> 2.0.0'
   gem 'web-console', '>= 3.3.0'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
-gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
